@@ -1,0 +1,24 @@
+﻿<Window x:Class="FTPExampleWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FTPExampleWPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="445.07" Width="323.239">
+    <Grid>
+        <RadioButton GroupName="Choose" x:Name="cbDownload" Content="Download" HorizontalAlignment="Left" Margin="18,17,0,0" VerticalAlignment="Top"/>
+        <RadioButton Checked="cbUpload_Checked" Unchecked="cbUpload_Unchecked" GroupName="Choose" x:Name="cbUpload" Content="Upload" HorizontalAlignment="Left" Margin="18,37,0,0" VerticalAlignment="Top" Width="108"/>
+        <Label Content="Server" HorizontalAlignment="Left" Margin="18,92,0,0" VerticalAlignment="Top" Width="47"/>
+        <TextBox x:Name="txtServer" Text="localhost" HorizontalAlignment="Left" Height="23" Margin="18,118,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="269"/>
+        <Label Content="Username" HorizontalAlignment="Left" Margin="18,158,0,0" VerticalAlignment="Top" Width="74"/>
+        <TextBox x:Name="txtUsername" HorizontalAlignment="Left" Height="23" Margin="18,189,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="127"/>
+        <Label Content="Password" HorizontalAlignment="Left" Margin="150,158,0,0" VerticalAlignment="Top" Width="74"/>
+        <TextBox x:Name="txtPassword" HorizontalAlignment="Left" Height="23" Margin="150,189,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="137"/>
+        <Label Content="FileName" HorizontalAlignment="Left" Margin="18,231,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtFileName" HorizontalAlignment="Left" Height="23" Margin="18,262,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="269"/>
+        <Button x:Name="btnUpload" Click="btnUpload_Click" Content="Execute" HorizontalAlignment="Left" Margin="81,297,0,0" VerticalAlignment="Top" Width="143" Height="36"/>
+        <ProgressBar x:Name="pbProgress" HorizontalAlignment="Left" Height="21" Margin="18,344,0,0" VerticalAlignment="Top" Width="269"/>
+        <Label Name="lblStatus" Content="" HorizontalAlignment="Center" Margin="0,365,0,0" VerticalAlignment="Top"/>
+    </Grid>
+</Window>
